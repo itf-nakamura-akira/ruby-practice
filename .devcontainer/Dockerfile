@@ -14,5 +14,10 @@ RUN apt-get update \
     lsb-release
 
 # Ruby
-RUN sudo apt-get install ruby-full -y
-RUN sudo gem install solargraph
+RUN git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+RUN echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
+RUN . ~/.bashrc
+RUN sudo apt update
+RUN sudo apt-get install autoconf bison patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev -y
+RUN git clone https://github.com/rbenv/ruby-build.git /root/.rbenv/plugins/ruby-build
+RUN ~/.rbenv/libexec/rbenv install 3.2.3
