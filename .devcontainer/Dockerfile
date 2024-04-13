@@ -12,3 +12,6 @@ RUN apt-get update \
     gnupg \
     mkcert \
     lsb-release
+
+# Ruby
+RUN sudo apt-get install ruby-full -y
