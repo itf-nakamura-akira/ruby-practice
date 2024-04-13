@@ -15,3 +15,4 @@ RUN apt-get update \
 
 # Ruby
 RUN sudo apt-get install ruby-full -y
+RUN sudo gem install solargraph
