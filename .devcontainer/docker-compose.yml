@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: ruby-practice
+
+    build: 
+      context: .
+      dockerfile: Dockerfile
+
+    volumes:
+      - ../:/workspace:cached
+
+    command: sleep infinity
